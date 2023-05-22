@@ -40,7 +40,7 @@ public class FileServiceImplement implements FileService {
 
     @Override
     public FileModel saveToFile(FileModel object) throws IOException {
-        String stringContent = object.getNik() + "," + object.getName() + "," + object.getBirthDay();
+        String stringContent = object.getNik() + "," + object.getNama() + "," + object.getTanggalLahir();
         addFile("profile.txt", stringContent, true);
         return null;
     }
@@ -61,7 +61,7 @@ public class FileServiceImplement implements FileService {
                     }
                 }
             }
-            System.out.println("data berhasil dibaca.");
+            System.out.println("output: " + output);
             reader.close();
             return output;
         } catch (FileNotFoundException e) {

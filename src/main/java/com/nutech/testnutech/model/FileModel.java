@@ -21,6 +21,6 @@ public class FileModel implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String nik;
-    private String name;
-    private Date birthDay;
+    private String nama;
+    private Date tanggalLahir;
 }
